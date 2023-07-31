@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = "_Nolayout";
+}
+
+@model DataArray
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Array</title>
+</head>
+<body>
+    <h1>Data Array</h1>
+    <form asp-action="AddData" method="post" style="display:flex; gap-4;">
+        <div style="width:fit-content">
+            @for(int a = 1; a<=5; a++)
+            {
+            <label style="display:flex; flex-direction:column; gap-2;"> Input data ke-@a
+                <input type="number" name="data[]"/>
+            </label>
+            }
+        </div>
+        <div>
+            <label asp-for="Value">Value:</label>
+            <input asp-for="Value" name="value" />
+            <span asp-validation-for="Value"></span>
+        <button type="submit">Add Data</button>
+        </div>
+    </form>
+    @{
+        if(ViewData["Hasil"] != null)
+        {
+            <p>@ViewData["Hasil"]</p>
+            <p>data : [@ViewData["Angka1"], @ViewData["Angka2"]]</p>
+        }
+        if (ViewData["HasilSalah"] != null)
+        {
+            <p>@ViewData["HasilSalah"]</p>
+        }
+    }
+</body>
+</html>

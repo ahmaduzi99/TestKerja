@@ -1,0 +1,80 @@
+﻿@{
+    Layout = "_Nolayout";
+}
+
+@model Registrasi
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat Form Login</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title-text">
+            <div class="title login">Form Registrasi</div>
+            <div class="title signup">Form Registrasi</div>
+        </div>
+        <div class="form-container">
+            <div class="form-inner">
+
+
+                <form method="post" enctype="multipart/form-data" asp-controller="Registrasi" class="signup" asp-action="Create">
+
+                    <div class="field">
+                        <label>Registrasi Date</label>
+                        <br />
+                        <input type="date" asp-for="RegDate" class="field" placeholder="Registrasi Date" required>
+                        <br />
+                    </div>
+                    <div class="field">
+                        <input type="text" asp-for="RegStatus" class="field" placeholder="Registrasi Status" required>
+                    </div>
+                    <div class="field">
+                        <input type="text" asp-for="Name" class="field" placeholder="Name" required>
+                    </div>
+                    <div class="field">
+                        <input type="text" asp-for="gender" class="field" placeholder="Gender" required>
+                    </div>
+                    <div class="field">
+                        <input type="text" asp-for="BirthPlace" class="field" placeholder="Birthplace" required>
+                    </div>
+                    <div class="field">
+                        <input type="date" asp-for="BrithDate" class="field" placeholder="BirthDate" required>
+                    </div>
+                    <div class="field">
+                        <input type="text" asp-for="Adress" class="field" placeholder="Addres" required>
+                    </div>
+                    <div class="field">
+                        <input type="text" asp-for="Email" class="field" placeholder="Email" required>
+                    </div>
+                    <div class="field">
+                        <input type="number" asp-for="Phone" class="field" placeholder="Phone" required>
+                    </div>
+                    <div class="field">
+                        <input type="text" asp-for="IdCard" class="field" placeholder="IdCard" required>
+                    </div>
+                    <div class="field">
+                        <input type="date" asp-for="CreateDate" class="field" placeholder="CreatedDate" required>
+                    </div>
+                    <div class="field">
+                        <input type="text" asp-for="CreateBy" class="field" placeholder="CreatedBy" required>
+                    </div>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Daftar">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/script.js"></script>
+
+</body>
+</html>

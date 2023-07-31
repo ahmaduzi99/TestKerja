@@ -1,0 +1,61 @@
+﻿@{
+    Layout = "_Nolayout";
+}
+@model Account
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form RegLogin</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title-text">
+            <div class="title login">Form Regis Login</div>
+            <div class="title signup">Form Registrasi</div>
+        </div>
+        <div class="form-container">
+            <div class="form-inner">
+
+                <form method="post" enctype="multipart/form-data" asp-controller="Account" class="signup" asp-action="Create">
+
+                    <div class="field">
+                        <input type="text" asp-for="username" class="field" placeholder="Masukan Username" required>
+                        <span asp-validation-for="username" class="text-danger"></span>
+                    </div>
+                    <div class="field">
+                        <input type="text" asp-for="email" class="field" placeholder="Masukan Email" required>
+                    </div>
+                    <div class="field">
+                        <input type="number" asp-for="phone" class="field" placeholder="No Telp" required>
+                        <span asp-validation-for="phone" class="text-danger"></span>
+                    </div>
+                    <div class="field">
+                      
+                        <input type="password" asp-for="password" class="field" placeholder="Masukan Password" required>
+                       
+                    </div>
+                    <span asp-validation-for="password" class="text-danger"></span>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Daftar">
+                    </div>
+
+
+                </form>
+
+
+            </div>
+        </div>
+
+        <div class="signup-link">Sudah Punya Akun <a href="/home/index">Login</a></div>
+    </div>
+
+    <script src="~/js/script.js"></script>
+
+</body>
+</html>

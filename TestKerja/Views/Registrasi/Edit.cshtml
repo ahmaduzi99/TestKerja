@@ -1,0 +1,81 @@
+﻿@{
+    Layout = "_Nolayout";
+}
+
+@model Registrasi
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat Form Login</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title-text">
+            <div class="title login">Form Edit Registrasi</div>
+            <div class="title signup">Form Registrasi</div>
+        </div>
+        <div class="form-container">
+            <div class="form-inner">
+
+
+                <form method="post" enctype="multipart/form-data" asp-controller="Registrasi" class="signup" asp-action="Edit">
+                    <input class="fa fa-user" type="text" asp-for="Id" hidden />
+                    <label>Registrasi Date</label>
+                    <div class="field">
+                       
+                       
+                        <input type="date" asp-for="RegDate" class="field" placeholder="Registrasi Date" required value="@Model.RegDate">
+                       
+                    </div>
+                    <div class="field">
+                        <input type="text" asp-for="RegStatus" class="field" placeholder="Registrasi Status" required value="@Model.RegStatus">
+                    </div>
+                    <div class="field">
+                        <input type="text" asp-for="Name" class="field" placeholder="Name" required value="@Model.Name">
+                    </div>
+                    <div class="field">
+                        <input type="text" asp-for="gender" class="field" placeholder="Gender" required value="@Model.gender">
+                    </div>
+                    <div class="field">
+                        <input type="text" asp-for="BirthPlace" class="field" placeholder="Birthplace" required value="@Model.BirthPlace">
+                    </div>
+                    <div class="field">
+                        <input type="date" asp-for="BrithDate" class="field" placeholder="BirthDate" required value="@Model.BrithDate">
+                    </div>
+                    <div class="field">
+                        <input type="text" asp-for="Adress" class="field" placeholder="Addres" required value="@Model.Adress">
+                    </div>
+                    <div class="field">
+                        <input type="text" asp-for="Email" class="field" placeholder="Email" required value="@Model.Email">
+                    </div>
+                    <div class="field">
+                        <input type="number" asp-for="Phone" class="field" placeholder="Phone" required value="@Model.Phone">
+                    </div>
+                    <div class="field">
+                        <input type="text" asp-for="IdCard" class="field" placeholder="IdCard" required value="@Model.IdCard">
+                    </div>
+                    <div class="field">
+                        <input type="date" asp-for="CreateDate" class="field" placeholder="CreatedDate" required value="@Model.CreateDate">
+                    </div>
+                    <div class="field">
+                        <input type="text" asp-for="CreateBy" class="field" placeholder="CreatedBy" required value="@Model.CreateBy">
+                    </div>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Daftar">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/script.js"></script>
+
+</body>
+</html>

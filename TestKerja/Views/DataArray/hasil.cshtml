@@ -1,0 +1,10 @@
+﻿@model List<DataArray>
+
+
+<h2>Data in Array:</h2>
+<ul>
+    @foreach (var dataArray in Model)
+    {
+        <li>@dataArray.Value</li>
+    }
+</ul>

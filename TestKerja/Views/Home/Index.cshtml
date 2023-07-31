@@ -1,0 +1,52 @@
+﻿@using TestKerja.Models.ViewModel;
+@{
+    Layout = "_Nolayout";
+}
+@model Login
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Membuat Form Login</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title-text">
+            <div class="title login">Form Login</div>
+            <div class="title signup">Form Registrasi</div>
+        </div>
+        <div class="form-container">
+            <div class="form-inner">
+                
+           
+                    <form id="login" class="login" method="post" asp-action="index">
+                    <div class="field">
+                            <input type="text" asp-for="Username" class="field" placeholder="Username" required>
+                    </div>
+                    <div class="field">
+                            <input type="password" asp-for="Password" class="field" placeholder="Password" required>
+                    </div>
+                    <br />
+                    <div class="pass-link"><a href="#">Lupa password?</a></div>
+                    <div class="field btn">
+                        <div class="btn-layer"></div>
+                        <input type="submit" value="Login">
+                    </div>
+
+                    <div class="signup-link">Buat akun <a href="/account/create">Daftar sekarang</a></div>
+                </form>
+                
+                    
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="~/js/script.js"></script>
+
+</body>
+</html>
